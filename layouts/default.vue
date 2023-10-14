@@ -2,7 +2,7 @@
   <v-app>
     <v-navigation-drawer
       v-model="drawer"
-      color="#128c7e"
+      color="#140c7e"
       dark
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -26,9 +26,9 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar color="#128c7e" dark :clipped-left="clipped" fixed app>
+    <v-app-bar color="#140c7e" dark :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <img src="/whatsapp.svg" class="mr-1" height="30" />
+      <img src="/whatsapp.svg" class="mr-1" height="40" />
       <v-toolbar-title v-text="title" />
     </v-app-bar>
     <v-main>
@@ -57,19 +57,24 @@ export default {
   data() {
     return {
       clipped: true,
-      drawer: false,
+      drawer: true,
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Messenger',
+          icon: 'mdi-chat',
+          title: 'Chats',
           to: '/',
+        },
+        {
+          icon: 'mdi-bullhorn-variant-outline',
+          title: 'Plantillas',
+          to: '/send',
         },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'API Messenger',
+      title: '',
     }
   },
 }

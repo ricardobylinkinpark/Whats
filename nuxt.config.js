@@ -10,7 +10,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
-    title: 'WhatsApp API Messenger',
+    title: 'PlasticBag Py',
     htmlAttrs: {
       lang: 'en'
     },
@@ -28,6 +28,11 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
+
+  env: {
+    pusherAppKey: process.env.PUSHER_APP_KEY || '2b3187b41e8c95cafab6',
+    pusherAppCluster: process.env.PUSHER_APP_CLUSTER || 'sa1'
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -52,7 +57,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:8000/api',
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
