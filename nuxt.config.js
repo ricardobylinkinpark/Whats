@@ -58,7 +58,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.BACKEND_URL || 'https://yppi6g7c3h.execute-api.sa-east-1.amazonaws.com/Prod',
+    baseURL: process.env.BACKEND_URL || 'https://yppi6g7c3h.execute-api.sa-east-1.amazonaws.com/Prod/api',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
