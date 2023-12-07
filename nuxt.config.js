@@ -18,7 +18,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=yes' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -58,7 +58,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.BACKEND_URL || 'http://localhost:8000/api',
+    baseURL: process.env.BACKEND_URL || 'https://yppi6g7c3h.execute-api.sa-east-1.amazonaws.com/Prod/api',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
